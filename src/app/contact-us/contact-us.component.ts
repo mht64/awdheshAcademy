@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-contact-us',
@@ -8,9 +8,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  contactUsForm: FormGroup;
+  constructor(private fb: FormBuilder) {
   }
+
+  ngOnInit() {}
 
 }
